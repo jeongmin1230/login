@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/slowslow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"
+            android:fontFamily="@font/slowslow"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etId" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:fontFamily="@font/slowslow"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/etPw" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:backgroundTint="#EDE7F6"
+            android:textColor="@color/black"
+            android:fontFamily="@font/slowslow"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:onClick="onClickLogin"
+            android:id="@+id/btnLogin" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:backgroundTint="#EDE7F6"
+            android:textColor="@color/black"
+            android:fontFamily="@font/slowslow"
+            android:textSize="20dp"
+            android:onClick="onClickJoin"
+            android:id="@+id/btnJoin" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="로그인 실패 정보"
+        android:fontFamily="@font/slowslow"
+        android:textSize="30dp"
+        android:id="@+id/tvFailInf" />
+
+</LinearLayout>

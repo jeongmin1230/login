@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JoinActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOIN"
+        android:textSize="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/slowslow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID "
+            android:fontFamily="@font/slowslow"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:ems="8"
+            android:id="@+id/etId" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHECK"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/slowslow"
+            android:backgroundTint="#EDE7F6"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:onClick="onClickDoubleCheck"
+            android:id="@+id/btnDoubleCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PW"
+            android:fontFamily="@font/slowslow"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:ems="8"
+            android:id="@+id/etPw" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEBEE"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름 "
+                android:fontFamily="@font/slowslow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textAlignment="center"
+                android:privateImeOptions="defaultInputted=korean"
+                android:ems="10"
+                android:id="@+id/etName" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="입력완료"
+        android:layout_gravity="center"
+        android:fontFamily="@font/slowslow"
+        android:backgroundTint="#EDE7F6"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickSign"
+        android:id="@+id/btnSign" />
+</LinearLayout>
