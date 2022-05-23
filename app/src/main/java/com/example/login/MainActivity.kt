@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tvFailInf.hint = ""
     }
 
     fun onClickLogin(view: View) {
@@ -46,10 +48,17 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, CompleteActivity::class.java)
 
                 Toast.makeText(this, "로그인 성공!\n[${name}]님 환영합니다.", Toast.LENGTH_SHORT).show()
+                etId.text.clear()
+                etPw.text.clear()
+                etId.requestFocus()
                 startActivity(intent)
-
-            } else {
-                tvFailInf.text = "로그인에 실패했습니다. 다시 시도해주세요."
+                break
+            } else if(!id.equals(etInputId) && !pw.equals(etInputPw)){
+                etId.text.clear()
+                etPw.text.clear()
+                etId.requestFocus()
+                Toast.makeText(this, "로그인에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                break
             }
         }
     }
